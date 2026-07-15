@@ -19,13 +19,15 @@ of AI, and the deployment to make it all work.
 
 ### A few things I've built
 
-- **[kiwiDeal](https://github.com/erwin09chauhan/kiwiDeal)** ([live demo](https://kiwideal.pages.dev)) — a marketplace with fixed price listings and live auctions, built as a modular monolith with real time bidding and Stripe checkout.
-- **[Kiwi Careers Tracker](https://github.com/erwin09chauhan/kiwi-careers-tracker)** ([live demo](https://kiwicareerstracker.pages.dev)) — a job application tracker with a status pipeline, live notifications, and an audit log for everything that happens.
-- **[DocuFlow](https://github.com/erwin09chauhan/docuflow)** ([live demo](https://docu-flow.pages.dev)) — upload a document and get structured data pulled out of it by AI, processed in the background with confidence scores per field.
-- **[Airport Admin](https://github.com/erwin09chauhan/airport-admin)** ([live demo](https://airport-admin.pages.dev)) — a staff scheduling system with a roster engine that assigns crew to shifts while respecting hours, leave, and availability.
+- **[kiwiDeal](https://github.com/erwin09chauhan/kiwiDeal)** ([live demo](https://kiwideal.pages.dev/)) — a marketplace with fixed price listings and live auctions. Built as a modular monolith with six independent modules talking to each other through an outbox based event pipeline, so the boundaries stay clean without the overhead of microservices. Live bidding and notifications run over SignalR, payments go through Stripe checkout, and auction bids handle concurrent writes safely so two people bidding at once can't corrupt the state.
 
-Live demos and more detail are in each repo. Heads up that a couple are on free
-hosting, so the first load can take a moment while the backend wakes up.
+- **[Kiwi Careers Tracker](https://github.com/erwin09chauhan/kiwi-careers-tracker)** ([live demo](https://kiwicareerstracker.pages.dev/)) — a job application tracker that follows each application from applied through to offer or rejection. Every status change fans out through a message queue to independent consumers, one writing the audit log, another pushing a live notification, so the pieces stay decoupled. There's a background service that watches for due reminders and Redis handling caching and rate limiting. Built on Clean Architecture with CQRS.
+
+- **[DocuFlow](https://github.com/erwin09chauhan/docuflow)** ([live demo](https://docu-flow.pages.dev/)) — a multi tenant platform where you upload a PDF, spreadsheet, or contract and get structured fields pulled out of it by AI, with a confidence score per field. Uploads don't block, they get queued and processed in the background through a pipeline of stages. Each tenant's data is fully isolated at the database level, and the AI backend sits behind a single interface so it can be swapped by config rather than code changes.
+
+- **[Airport Admin](https://github.com/erwin09chauhan/airport-admin)** ([live demo](https://airport-admin.pages.dev/)) — a staff scheduling system for airport ground operations. The interesting part is the roster engine, which assigns crew to shifts while respecting a stack of real constraints at once: per person hour limits per day and week, max consecutive days, approved leave, and marked availability. Role based access separates what admins, supervisors, and crew can each see and do.
+
+Find more details in the respective repos. A couple of the demos are on free hosting, so give them a moment to wake up on the first load.
 
 ### Get in touch
 
