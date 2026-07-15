@@ -19,14 +19,10 @@ of AI, and the deployment to make it all work.
 
 ### A few things I've built
 
-- **kiwiDeal** — a marketplace with fixed price listings and live auctions, built as
-  a modular monolith with real time bidding and Stripe checkout.
-- **Kiwi Careers Tracker** — a job application tracker with a status pipeline, live
-  notifications, and an audit log for everything that happens.
-- **DocuFlow** — upload a document and get structured data pulled out of it by AI,
-  processed in the background with confidence scores per field.
-- **Airport Admin** — a staff scheduling system with a roster engine that assigns
-  crew to shifts while respecting hours, leave, and availability.
+- **[kiwiDeal](https://github.com/erwin09chauhan/kiwiDeal)** ([live demo](https://kiwideal.pages.dev)) — a marketplace with fixed price listings and live auctions, built as a modular monolith with real time bidding and Stripe checkout.
+- **[Kiwi Careers Tracker](https://github.com/erwin09chauhan/kiwi-careers-tracker)** ([live demo](https://kiwicareerstracker.pages.dev)) — a job application tracker with a status pipeline, live notifications, and an audit log for everything that happens.
+- **[DocuFlow](https://github.com/erwin09chauhan/docuflow)** ([live demo](https://docu-flow.pages.dev)) — upload a document and get structured data pulled out of it by AI, processed in the background with confidence scores per field.
+- **[Airport Admin](https://github.com/erwin09chauhan/airport-admin)** ([live demo](https://airport-admin.pages.dev)) — a staff scheduling system with a roster engine that assigns crew to shifts while respecting hours, leave, and availability.
 
 Live demos and more detail are in each repo. Heads up that a couple are on free
 hosting, so the first load can take a moment while the backend wakes up.
