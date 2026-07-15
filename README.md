@@ -33,4 +33,3 @@ Find more details in the respective repos. A couple of the demos are on free hos
 
 - 📧 arvindkumar.mularam@gmail.com
 - 💼 [LinkedIn](https://linkedin.com/in/arvind-chauhan-515452417)
-- 🌐 [Portfolio](https://portfolio-website-9pk.pages.dev)
