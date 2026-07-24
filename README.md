@@ -31,4 +31,4 @@ Find more details in the respective repos. A couple of the demos are on free hos
 ### Get in touch
 
 - 📧 arvindkumar.mularam@gmail.com
-- 💼 [LinkedIn](https://linkedin.com/in/arvind-chauhan-515452417)
+- 💼 [LinkedIn](https://www.linkedin.com/in/arvind-chauhan-dev/)
